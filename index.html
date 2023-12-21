@@ -1,0 +1,84 @@
+<style>
+    #game {
+        width: 1000px;
+        height: 600px;
+        background-image: url(instituto.webp);
+        margin: 0 auto;
+    }
+
+    .characters {
+        width: 496px;
+        height: 400px;
+        display: inline-block;
+    }
+
+    #character1 {
+        background-image: url(sucret.png);
+        background-size: 100%;
+    }
+
+    #character2 {
+        background-image: url(alexy.webp);
+        background-size: 100%;
+    }
+
+    #dialog {
+        height: 100px;
+        margin-top: 25px;
+        margin-left: 20px;
+        margin-right: 20px;
+        cursor: pointer;
+
+        padding: 20px;
+        font-size: 25px;
+        background-color: rgba(255, 255, 255, .8);
+        border-radius: 20px;
+    }
+
+    #final {
+        display: none;
+        max-height: 600px;
+        margin: 0 auto;
+    }
+</style>
+
+<div id="game">
+    <div class="characters" id="character1">
+        .
+    </div>
+    <div class="characters" id="character2">
+        .
+    </div>
+    <div id="dialog" onclick="nextComment()">
+        (Click para empezar)
+    </div>
+</div>
+
+<img id="final" src="final.jpeg" alt="Alexy ofreciendo un cupcake a Sucret en un ambiente romántico.">
+
+<script>
+
+const comments = [
+    "<b>Alexy</b>: ¡Hey, Sucret! Me encanta tu camiseta hoy. Ese color te queda genial.",
+    "<b>Sucret</b>: ¡Gracias, Alexy! La elegí pensando en algo alegre para hoy. ¿Y tú? Siempre estás a la moda.",
+    "<b>Alexy</b>: ¡Oh, sabes que la moda es mi segundo idioma! Pero, hablando de cosas agradables, ¿has visto la nueva cafetería que abrieron cerca? Tienen los mejores muffins.",
+    "<b>Sucret</b>: ¿En serio? Me encantan los muffins. ¿Tal vez podríamos ir juntos después de clases?",
+    "<b>Alexy</b>: Eso suena como un plan perfecto. Y, quién sabe, tal vez descubramos más cosas que nos gustan aparte de los muffins.",
+    "<b>Sucret</b>: Eso espero. Me gusta descubrir cosas nuevas, especialmente con buen compañía.",
+    "<b>Alexy</b>: Entonces, es una cita. ¡Nos vemos después de clase, Sucret!"
+];
+
+let commentIndex = 0;
+
+function nextComment() {
+    document.getElementById('dialog').innerHTML = comments[commentIndex]
+
+    commentIndex = commentIndex + 1;
+
+    if (commentIndex > comments.length) {
+        document.getElementById('game').style.display = 'none'; // Ocultar el juego
+        document.getElementById('final').style.display = 'block'; // Mostrar la imagen
+    }
+}
+
+</script>
