@@ -1,7 +1,9 @@
 # Aprende a hacer tu propio juego Otome.
 
 
-Crea tu propio juego Otome
+Este repositorio forma parte de la serie de YouTube para crear tu propio juego Otome: [Crea tu propio juego Otome](https://www.youtube.com/playlist?list=PLKVepXm-__QXFBAPIKkBfWj4sI9RJbUhx)
+
+Crea tu propio juego Otome.
 
 # Recursos
 
